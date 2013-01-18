@@ -30,9 +30,7 @@ def run
       case command
         when 'q' then puts "Goodbye!" 
         when 'p' then post_status(access_token, parts[1..-1].join(" "))
-        when 'spam' then spam_my_followers(parts[1..-1].join(" "))
         when 'dm' then send_dm(access_token, parts[1], parts[2..-1].join(" "))
-        when 'last' then last(parts[1])
         when 'me' then user_timeline(access_token)
         when 't' then user_timeline(access_token, parts[1])
         else
