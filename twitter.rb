@@ -42,7 +42,7 @@ def run
   def get_access_token
     # send user to twitter URL to authorize application
     request_token = CONSUMER.get_request_token
-    puts "Go to this URL: #{request_token.authorize_url}"
+    Launchy.open(request_token.authorize_url)
 
     # because we don't use a redirect URL; user will receive an "out of
     # band" verification code that the application may exchange for a
