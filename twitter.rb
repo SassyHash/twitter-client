@@ -21,6 +21,11 @@ class TwitterClient
 def run
     puts "Welcome to Brittany & Jason twitter interface!"
     puts "Here are your abundant command options"
+    # ***
+    # NR Why not split this up into multiple puts? A natural
+    # break point would be at the \n. This line seems excessively
+    # long.
+    # ***
     puts " Post a status: p your status \n Send a direct message: dm person message \n Access your timeline: me \n Other person's timeline: t screenname"
     access_token = get_token("twitter_token")
     input = ""
